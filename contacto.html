@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC Consulting Group S.A.</title>
+    <link rel="stylesheet" href="./CSS/style_general.css">
+    <link rel="stylesheet" href="./CSS/style_pie.css">
+    <script src="./JS/SCRIPT.js"></script>
+</head>
+
+<body>
+    <!--ENCABEZADO: CG Consulting Group S.A. -->
+    <header class="Encabezado">
+        <span id="hora-actual" style="position: absolute; top: 10px; left: 10px; font-weight: bold;"></span>
+        <h1>GC Consulting Group S.A.</h1>
+        <p>Consultora  integral en gestion del riesgo.</p>
+        <img src="./SRC/IMAGENES/3.jfif" class="logo" alt="Logo de CG Consulting Group S.A. "  width="190" height="170" > 
+    </header>
+    
+    <!--NAVEGACION: Inicio, Servicios, Nosotros, Contacto -->
+    <nav class="Navegacion">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./nosotros.html" >Nosotros</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+            <li><a href="./contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="Seccion">
+        <h2 style="text-align: center;">Consulta con nosotrós tu caso</h2>
+        <p style="text-align: center;" class="texto-justificado">
+            Cuentanos tu caso, estamos de tu lado en GC Consulting Group S.A. 
+             te ofrecemos un servicio personalizado para atender tus necesidades de seguros.
+        </p> <br> <br>
+        <form action="#" method="post" style="text-align: center;">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+<footer class="Pie">
+            <div >
+                <p>© Compañía C G Consulting Group S.A. <br> Todos los derechos reservados 2025.</p>
+                <p>Contacto:</p>
+            </div>
+        <a href="https://wa.me/573000000000" target="_blank" class="whatsappBoton">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" alt="WhatsApp">
+    <span class="whatsappMsj">Chatea con nosotros</span></a>
+    <a href="#Top"><img src="./SRC/IMAGENES/Boton_top.png" id="botonArriba" alt="Botón para subir al inicio de la página"></a>
+    <script src="BOTON_TOP.JS"></script>
+</footer>
+</body>
+</html>

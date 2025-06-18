@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC Consulting Group S.A.</title>
+    <link rel="stylesheet" href="./CSS/style_general.css">
+    <link rel="stylesheet" href="./CSS/style_pie.css">
+    
+    <script src="./JS/SCRIPT.js"></script>
+     <script>
+        const imagenes = [
+            './SRC/IMAGENES/SegurosDeVehiculos.png',
+            './SRC/IMAGENES/SeguroDeVida.png',
+            './SRC/IMAGENES/SeguroDeHogar.png',
+            './SRC/IMAGENES/SeguroDeViaje.png',
+            './SRC/IMAGENES/SeguroParaNegocios.png',
+            './SRC/IMAGENES/SeguroDeResponsabilidadCivil.png',
+            './SRC/IMAGENES/PlanesPersonalizados.png'
+        ];
+
+        enlaces = [
+            'SEGUROS_DE_VEHICULOS.HTML',
+            'SEGURO_DE_VIDA.HTML',
+            'SEGURO_DE_HOGAR.HTML',
+            'SEGURO_DE_VIAJE.HTML',
+            'SEGURO_NEGOCIO.HTML',
+            'SEGURO_RESPONSABILIDAD_CIVIL.HTML',
+            'MULTIPOLIZA.HTML'
+        ]
+        
+        //Índice actual de la imagen mostrada
+        let indiceActual = 0;
+        const serviciosCarrusel = document.getElementById('imgServicios');
+        function mostrarServiciosCarrusel() {
+        const contenedor = document.querySelector('.serviciosCarrusel-Contenido');
+        contenedor.innerHTML = '';
+        
+        //Cargar 3 imágenes: anterior, actual y siguiente
+        const anterior = (indice -1 + imagenes.length) % imagenes.length;
+        const actual = document.getElementById('contenedorCarrusel')
+        const siguiente = (indice + 1) % imagenes.length;
+        }       
+        //Función que cambia la imagen según la dirección
+        function cambiarImagen (direccion) {
+            indiceActual += direccion;
+            if (indiceActual >= imagenes.length) {
+                indiceActual = 0;
+            }
+            else if (indiceActual < 0) {
+                indiceActual = imagenes.length - 1;
+            }
+
+        const serviciosCarrusel = document.getElementById('imgServicios');
+        serviciosCarrusel.src = imagenes[indiceActual];
+        document.getElementById('mienlace').href = enlaces[indiceActual];
+        }
+
+    
+        
+    </script>
+</head>
+
+<body>
+    <!--ENCABEZADO: CG Consulting Group S.A. -->
+    <header class="Encabezado">
+        <span id="hora-actual" style="position: absolute; top: 10px; left: 10px; font-weight: bold;"></span>
+        <h1>GC Consulting Group S.A.</h1>
+        <p>Consultora  integral en gestion del riesgo.</p>
+        <img src="./SRC/IMAGENES/3.jfif" class="logo" alt="Logo de CG Consulting Group S.A. "  width="190" height="170" > 
+    </header>
+    
+    <!--NAVEGACION: Inicio, Servicios, Nosotros, Contacto -->
+    <nav class="Navegacion">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./nosotros.html" >Nosotros</a></li>
+            <li><a href="./servicios.html" class="activo">Servicios</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="Seccion">
+        <h2 style="text-align: center;">Nuestros Servicios</h2>
+        <div class="serviciosCarrusel">
+            <img id="imgServicios" src="./SRC/IMAGENES/SegurosDeVehiculos.png" alt="Seguros de Vehículos">
+            <img id="imgServicios" src="./SRC/IMAGENES/SeguroDeVida.png" alt="Seguro de Vida">
+            <img id="imgServicios" src="./SRC/IMAGENES/SeguroDeHogar.png" alt="Seguro de Hogar">
+            <img id="imgServicios" src="./SRC/IMAGENES/SeguroDeViaje.png" alt="Seguro de Viaje">
+            <img id="imgServicios" src="./SRC/IMAGENES/SeguroParaNegocios.png" alt="Seguro para Negocios">
+            <img id="imgServicios" src="./SRC/IMAGENES/SeguroDeResponsabilidadCivil.png" alt="Seguro de Responsabilidad Civil">
+            <img id="imgServicios" src="./SRC/IMAGENES/PlanesPersonalizados.png" alt="Planes Personalizados">
+        </div>
+        <div style="position: relative;">
+        <a id="mienlace" href="SEGUROS_DE_VEHICULOS.HTML" target="_blank">
+            <button class="hipervinculo">Conoce más</button>
+        </a>
+    </div>
+    </section>
+   <!--Botón anterior-->
+    <button class="boton prev"
+    onclick="cambiarImagen(-1)">&#10094;</button>
+    
+    <!--Aquí se insertan las 3 imágenes-->
+    <div class="contenedor-imagenes" id="contenedorCarrusel"></div>
+    
+    <!--Botón despues-->
+    <button class="boton next"
+    onclick="cambiarImagen(1)">&#10095;</button>
+    
+   <footer class="Pie">
+            <div >
+                <p>© Compañía C G Consulting Group S.A. <br> Todos los derechos reservados 2025.</p>
+                <p>Contacto:</p>
+            </div>
+        <a href="https://wa.me/573000000000" target="_blank" class="whatsappBoton">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" alt="WhatsApp">
+    <span class="whatsappMsj">Chatea con nosotros</span>
+    </a>
+
+    <a href="#Top"><img src="./SRC/IMAGENES/Boton_top.png" id="botonArriba" alt="Botón para subir al inicio de la página"></a>
+
+    <script src="BOTON_TOP.JS"></script>
+    </footer>
+</body>
+</html>
