@@ -1,0 +1,425 @@
+/* Estilo del cuerpo web */
+body {
+    background-color: #09017e;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+/* Estilo del encabezado */
+.Encabezado {
+    background-color: #070158f3;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.texto-justificado {
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+
+/* Estilo del encabezado img */
+.logo {
+    width: 190px;
+    max-width: 80vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: width 0.3s;
+} 
+
+.imagen-seccion {
+  width: 400px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+/* Estilo del pie de derechos reservados*/
+.Pie {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Reglas de navegación */
+.Navegacion ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #060061d7;
+}
+
+.Navegacion li {
+    margin: 0 15px;
+}
+
+.Navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.Navegacion a:hover,
+.Navegacion .activo {
+    background-color: #1f013b;
+}
+
+/* Estilo de las secciones */
+.Seccion {
+    background-color: #f7feff;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de formulario de contacto */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form label {
+    font-weight: 600;
+    color: #00619e;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: 1px solid #f8aaaa;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    background-color: #004f80;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00395a;
+}
+/*Joha*/
+    #botonArriba{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    /*Botón Whatsapp Inicio*/
+    .whatsappBoton {
+        position: fixed;
+        bottom: 70px; /*Aquí subimos el botón por encima del #TOP*/
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+}
+/*Joha*/
+    .whatsappBoton img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+}
+
+/*Joha*/
+.whatsappMsj {
+    visibility: hidden; /*Oculta el texto*/
+    position: absolute;
+    right: 60px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: green;
+    padding: 6px 10px;  
+    border-radius: 4px;
+    white-space: nowrap; /*Hace que el texto salga en una sola línea*/
+    font-size: 13px;
+    transition: opacity 0.3s;
+    pointer-events: none; /*El msj no bloquea dar click*/
+}
+
+/*Joha*/
+.whatsappBoton:hover .whatsappMsj {
+    visibility: visible;
+    opacity: 1;
+}
+/*Botón Whatsapp Fin*/
+
+/*Joha*/
+
+/*Carrusel de servios inicio*/
+.serviciosCarrusel {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    /*padding: 20px;*/
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.serviciosCarrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity;
+    object-fit: cover;
+}
+
+.contenedorCarrusel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedorCarrusel img {
+    transition: all 0.5s ease;
+    object-fit: cover;
+    width: 150px;
+    height: 200px;
+    transform: scale(0.8);
+}
+
+.contenedorCarrusel img.central {
+    width: 300px;
+    height: 300px;
+    transform: scale(1);
+    z-index: 2;
+}
+/*Carrusel de servios fin*/
+
+
+/*hiperviculo inicio*/
+.cuadro:last-of-type {
+    margin-bottom: 0;
+}
+
+.hipervinculo{
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: rgba(0, 123, 255, 0.8); color: white; border: none;
+    padding: 6px 12px; border-radius: 4px; cursor: pointer
+}
+/*hiperviculo final*/
+
+/* Boton pasar las imagenes en el carrusel inicio*/
+.boton {
+    position: absolute;
+    top: 130%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/*Joha*/
+.boton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+    .prev {
+    left: 170px;
+    }
+
+    .next {
+    right: 170px;
+}
+/* Boton pasar las imagenes en el carrusel fin*/
+
+/*Sección de servicios inicio*/
+h1 {
+    color: white;
+    background-color: #070158f3;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.testimonio {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    margin: 20px 0;
+    font-style: italic;
+    border-radius: 10px;
+}
+
+.boton-cotizar {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cuadro {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1;
+}
+/*Sección de servicios fin*/
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .logo {
+        width: 120px;
+    }
+
+    .Encabezado {
+        padding: 20px 10px;
+    }
+
+    .Pie {
+        font-size: 0.8rem;
+    }
+
+    .Seccion {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .Tarjetas {
+        flex-direction: column;
+    }
+
+    .Navegacion li {
+        flex-direction: column;
+    }
+
+    .imagen-seccion {
+    width: 250px;
+  }
+  /* --- RESPONSIVE DESIGN --- */
+    .serviciosCarrusel {
+        width: 95vw;
+        height: 250px;
+    }
+    .contenedorCarrusel img {
+        width: 90px;
+        height: 120px;
+    }
+    .contenedorCarrusel img.central {
+        width: 180px;
+        height: 180px;
+    }
+    .prev, .next {
+        left: 30px;
+        right: 30px;
+        font-size: 1.5rem;
+    }
+    .boton {
+        top: 110%;
+    }
+
+    #botonArriba,
+    .whatsappBoton {
+        width: 35px;
+        height: 35px;
+        right: 10px;
+    }
+    .whatsappBoton {
+        bottom: 60px;
+    }
+    .serviciosCarrusel {
+        width: 98vw;
+        height: 160px;
+    }
+    .contenedorCarrusel img {
+        width: 60px;
+        height: 80px;
+    }
+    .contenedorCarrusel img.central {
+        width: 110px;
+        height: 110px;
+    }
+    .boton {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.7rem;
+        top: 105%;
+    }
+    .prev, .next {
+        left: 10px;
+        right: 10px;
+    }
+    .fila {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cuadro {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .boton-cotizar {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+    .hipervinculo {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+}
